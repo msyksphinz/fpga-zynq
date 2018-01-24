@@ -41,6 +41,8 @@ class WithSmallCores extends Config(
 class ZynqConfig extends Config(new WithZynqAdapter ++ new DefaultFPGAConfig)
 class ZynqSmallConfig extends Config(new WithSmallCores ++ new ZynqConfig)
 
+class ZynqRoccConfig extends Config(new WithZynqAdapter ++ new RoccExampleConfig)
+
 class WithIntegrationTest extends Config(
   (pname, site, here) => pname match {
     case BuildSerialDriver =>
